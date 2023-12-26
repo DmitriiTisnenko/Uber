@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="css/bootstrap-grid.min.css">
     <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
     <link rel="stylesheet" href="css/fonts.css">
-    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/style.css">
 
 </head>
 <body>
@@ -54,7 +54,7 @@
                         
                     <div class="col-6 col-md-3 col-xl-2">
                         <a href="tel:84957970988" class="subheader_phone xs-visible">8 495 797 09 88</a>
-                        <button class="subheader_btn">заказать звонок</button>
+                        <button class="btn btn_request subheader_btn">заказать звонок</button>
                     </div>
                 </div>
             </div>
@@ -69,14 +69,14 @@
                     <h2 class="promo_subheader">ПРИГЛАШАЕМ ВОДИТЕЛЕЙ! НА СВОЕМ АВТО!</h2>
                     <p class="promo_text">Компания UBER  динамически развивающаяся. Компания на рынке занимает лидирующее место среди таксомоторных компаний, Компания абсолютно прозрачная вы можете контролировать все процессы у себя в личном кабинете. Бонуcная система.Помимо выполненной работы по заказам, компания начисляет бонусы запиковое время.</p>
                     <p class="promo_text">Мы одни из партнеров и зарекомендовали себя как одна из лучших команд в городе Москве.  Водители у насзарабатывают от 80000- 120000 в месяц.</p>
-                    <button class="promo_btn">ОТПРАВИТЬ ЗАЯВКУ!</button>
+                    <button class="btn btn_request promo_btn">ОТПРАВИТЬ ЗАЯВКУ!</button>
                 </div>
             </div>
         </div>
     </section>
 
     <section class="reason">
-        <button class="label">преимущества</button>
+        <button class="label" disabled>преимущества</button>
         <h2 class="title">8 причин начать работать с нами</h2>
         <div class="container">
             <div class="row">
@@ -313,7 +313,7 @@
 
     <section class="world">
         <div class="container">
-            <button class="label label_white">города</button>
+            <button class="btn label label_white">города</button>
             <div class="title title_white">По всему миру</div>
             <div class="subtitle subtitle_white">Мы в вашем городе и по всему миру</div>
             <a href="#" class="world_link" target="_blank">посмотреть все города</a>
@@ -357,6 +357,36 @@
         </div>
    </footer>
 
+   <div class="modal">
+        <div class="modal__dialog">
+            <div class="modal__content">
+                <form id='form' action="#">
+                    <div data-close class="modal__close">&times;</div>
+                    <div class="modal__title">Мы свяжемся с вами как можно быстрее!</div>
+                    <input required placeholder="Ваше имя" name="name" type="text" class="modal__input">
+                    <input required placeholder="Ваш номер телефона" name="phone" type="phone" class="modal__input">
+                    <input required placeholder="Ваш email" name="email" type="email" class="modal__input">
+                    <button class="btn btn_min">Перезвонить мне</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- thanks modal -->
+    <div class="modal modal_mini" id="thanks">
+        <div class="modal__dialog">
+            <div class="modal__content">
+                <!-- <div class="modal__close">&times;</div> -->
+                <div class="modal__title">Спасибо за вашу заявку!</div>
+                <div class="modal__subtitle">Наш менеджер свяжется с вами <br> в ближайшее время!</div>
+                <div class="modal__subtitle">Это сообщение закроется самостоятельно.</div>
+            </div>
+        </div>
+    </div>
+
+
    <script src="js/script.js"></script>
+   <script src="js/just-validate.production.min.js"></script>
+   <script src="js/inputmask.min.js"></script>
 </body>
 </html>
