@@ -1,5 +1,6 @@
 // import JustValidate from 'just-validate';
 
+
 window.addEventListener('DOMContentLoaded', () => {
     const menu = document.querySelector('.menu'),
         menuItem = document.querySelectorAll('.menu_item'),
@@ -8,7 +9,8 @@ window.addEventListener('DOMContentLoaded', () => {
         modal = document.querySelector('.modal'),
         thanksModal = document.querySelector('#thanks')
         close = document.querySelector('.modal__close'),
-        form = document.querySelector('#form');
+        form = document.querySelector('#form'),
+        requestLink = document.querySelector('[data-request]');
         
 
     hamburger.addEventListener('click', () => {
@@ -22,6 +24,9 @@ window.addEventListener('DOMContentLoaded', () => {
             menu.classList.toggle('menu_active');
         })
     })
+
+    requestLink.addEventListener('click', openModal);
+
     const timeoutID = setTimeout(openModal, 30000);
 
     btnsReq.forEach(btn => {
